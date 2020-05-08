@@ -17,7 +17,7 @@ const Contacts = ({ search, sort }) => {
 		fetchContacts()
 	}, []);
 
-	function processContacts(search = "", sort, data) {
+	const listContacts = (search = "", sort, data) => {
 		let list = data
 
 		if (search.length > 0) {
@@ -60,7 +60,7 @@ const Contacts = ({ search, sort }) => {
 				<span className="contact__data">Empresa</span>
 				<span className="contact__data">Departamento</span>
 			</article>
-			{processContacts(search, sort, contacts).map(contact => <Contact {...contact} key={contact.id} />)}
+			{listContacts(search, sort, contacts).map(contact => <Contact {...contact} key={contact.id} />)}
 		</div>
 	)
 }

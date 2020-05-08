@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default ({ search, sort, setSort }) =>
 	<div data-testid="filters" className="container">
 		<section className="filters">
